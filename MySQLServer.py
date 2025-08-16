@@ -1,9 +1,9 @@
-# Import mysql-connector module 
-from mysql.connector import Error, connect
+# Import the mysql-connector module
+import mysql.connector 
 
 # Make connection to SQL Server and handle connection error(s)
 try:
-    with connect(
+    with mysql.connector.connect(
         host = "localhost",
         user = "root",
         password = "wealthdevtech",
@@ -12,5 +12,5 @@ try:
         print(f"Database 'alx_book_store' created successfully!")
         cursor = alx_book_store.cursor()
         cursor.execute("")
-except Error as e:
+except mysql.connector.Error as e:
     print(e)
