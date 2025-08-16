@@ -11,6 +11,6 @@ try:
     ) as alx_book_store:
         print(f"Database 'alx_book_store' created successfully!")
         cursor = alx_book_store.cursor()
-        cursor.execute("")
+        cursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
 except mysql.connector.Error as e:
     print(e)
